@@ -1,0 +1,151 @@
+@include respond-to("small") {
+  .header {
+    padding: 3rem;
+
+    border-bottom: 1px solid #68707d80;
+    & .nav-desktop {
+      display: block;
+      display: flex;
+      gap: 2rem;
+
+      &_item {
+        position: relative;
+        color: $gray-color;
+        transition: $primary-transition;
+
+        &::before {
+          content: "";
+          bottom: -4rem;
+          position: absolute;
+          width: 0;
+          height: 4px;
+          background-color: $orange-color;
+          transition: $primary-transition;
+        }
+        &:hover {
+          color: $black-color;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+
+    & .cart-box {
+      left: calc(100% - 22rem);
+
+      &.active {
+        bottom: calc(-12rem + -0.5rem);
+      }
+    }
+    &_left {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    &_menu {
+      display: none;
+    }
+    &_right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &_avatar {
+      width: 3rem;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: $primary-transition;
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid $orange-color;
+      }
+    }
+  }
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(350px, 500px));
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 5rem;
+  }
+  .slider {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &_image {
+      border-radius: 1rem;
+    }
+
+    &_next,
+    &_previous {
+      display: none;
+    }
+
+    &_thumbnails {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+
+    &_button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: $primary-transition;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &_thumbnail {
+      border: 3px solid transparent;
+      border-radius: 0.5rem;
+      width: 6rem;
+      max-width: 100%;
+      transition: $primary-transition;
+
+      &.active {
+        border: 3px solid $orange-color;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .product {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &_buttons {
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+    }
+    &_title {
+      font-size: 3rem;
+      margin: 0 0 10px 0;
+    }
+
+    &_prices {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &_price {
+      margin: -0.5rem;
+    }
+    &_discount {
+      margin-bottom: 2rem;
+    }
+    &_quantities {
+      padding: 0.5rem;
+    }
+    &_add-to-cart {
+      padding: 1.2rem;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Sass/main.css" />
+    <link rel="icon" href="images/favicon-32x32.png" />
+
+    <title>ecommerce product page</title>
+  </head>
+  <header class="header container flex">
+    <div class="header_left">
+      <button class="header_menu" aria-label="click to show mobile menu">
+        <img src="images/icon-menu.svg" alt="" />
+      </button>
+      <img src="images/logo.svg" alt="logo" />
+      <nav class="nav-desktop">
+        <a class="nav-desktop_item" href="#">Collections</a>
+        <a class="nav-desktop_item" href="#">Men</a>
+        <a class="nav-desktop_item" href="#">Women</a>
+        <a class="nav-desktop_item" href="#">About</a>
+        <a class="nav-desktop_item" href="#">Contact</a>
+      </nav>
+    </div>
+
+    <div class="header_right">
+      <button class="header_cart" aria-label="click to show cart items">
+        <img src="images/icon-cart.svg" alt="" />
+        <span class="header_cart-total">0</span>
+      </button>
+      <img class="header_avatar" src="images/image-avatar.png" alt="" />
+    </div>
+    <div class="cart-box">
+      <p class="cart-box_header">cart</p>
+      <div class="cart-box_items">
+        <span class="no-item">Your cart is empty</span>
+        <div class="cart-box_item">
+          <img
+            class="cart-box_image"
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+          />
+          <div class="cart-box_info">
+            <p class="cart-box_name">Autumn Limitied Edition...</p>
+            <p class="cart-box_price">
+              $125.00 x <span class="cart-box_number">3</span>
+              <span class="cart-box_total">$375.00</span>
+            </p>
+          </div>
+          <button aria-label="click to delete items" class="cart-box_delete">
+            <img src="images/icon-delete.svg" alt="" />
+          </button>
+        </div>
+        <button class="cart-box_checkout">Checkout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-mobile">
+    <button class="nav-mobile_close" aria-label="click to close mobile menu">
+      <img src="images/icon-close.svg" alt="" />
+    </button>
+    <nav class="nav-mobile_items">
+      <a class="nav-mobile_item" href="#">Collections</a>
+      <a class="nav-mobile_item" href="#">Men</a>
+      <a class="nav-mobile_item" href="#">Women</a>
+      <a class="nav-mobile_item" href="#">About</a>
+      <a class="nav-mobile_item" href="#">Contact</a>
+    </nav>
+  </div>
+
+  <main class="main">
+    <section class="slider">
+      <div class="slider_box flex">
+        <img class="slider_image" src="images/image-product-1.jpg" alt="" />
+        <img class="slider_image" src="images/image-product-2.jpg" alt="" />
+        <img class="slider_image" src="images/image-product-3.jpg" alt="" />
+        <img class="slider_image" src="images/image-product-4.jpg" alt="" />
+
+        <button
+          aria-label="click to move to the previous slider"
+          class="slider_previous active"
+        >
+          <img src="images/icon-previous.svg" alt="" />
+        </button>
+        <button
+          aria-label="click to move to the next slider"
+          class="slider_next"
+        >
+          <img src="images/icon-next.svg" alt="" />
+        </button>
+      </div>
+      <div class="slider_thumbnails">
+        <button class="slider_button">
+          <img
+            class="slider_thumbnail active"
+            data-index="1"
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+          />
+        </button>
+        <button class="slider_button">
+          <img
+            class="slider_thumbnail"
+            data-index="2"
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+          />
+        </button>
+        <button class="slider_button">
+          <img
+            class="slider_thumbnail"
+            data-index="3"
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+          />
+        </button>
+        <button class="slider_button">
+          <img
+            class="slider_thumbnail"
+            data-index="4"
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+          />
+        </button>
+      </div>
+    </section>
+
+    <section class="product">
+      <p class="product_company">snakers company</p>
+      <h1 class="product_title">
+        fall limited edition <br />
+        snakers
+      </h1>
+      <p class="product_p">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they’ll withstand everything the
+        weather can offer.
+      </p>
+      <div class="product_prices flex">
+        <div class="product_price flex">
+          <p>$125.00</p>
+          <span>50%</span>
+        </div>
+        <span class="product_discount">$250.00</span>
+      </div>
+      <div class="product_buttons">
+        <div class="product_quantities">
+          <button class="product_reduce">
+            <img src="images/icon-minus.svg" alt="" />
+          </button>
+          <span class="product_quantitiy">0</span>
+          <button class="product_increase">
+            <img src="images/icon-plus.svg" alt="" />
+          </button>
+        </div>
+        <div class="product_add-to-cart">
+          <button
+            aria-label="click to add to cart"
+            class="product_add-to-cart_container"
+          >
+            <img src="images/icon-cart.svg" alt="" />
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <body>
+    <script src="Javascript/main.js" type="module"></script>
+    <script src="Javascript/utilities.js" type="module"></script>
+  </body>
+</html>

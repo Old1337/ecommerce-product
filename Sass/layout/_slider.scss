@@ -1,0 +1,43 @@
+.slider {
+  &_box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &_thumbnails {
+    display: none;
+  }
+
+  &_image {
+    max-width: 100%;
+    transition: $primary-transition;
+  }
+
+  &_image_desktop {
+    display: none;
+  }
+  &_next,
+  &_previous {
+    position: absolute;
+    border: none;
+    background: white;
+    @include circle(3rem, 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &.active {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+  &_next {
+    right: calc(0% + 1rem);
+  }
+  &_previous {
+    left: calc(0% + 1rem);
+  }
+}

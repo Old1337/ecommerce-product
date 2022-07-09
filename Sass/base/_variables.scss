@@ -1,0 +1,19 @@
+$header-color: hsl(0, 0%, 100%);
+$orange-color: hsl(26, 100%, 55%);
+$primary-color: hsl(223, 64%, 98%);
+$gray-color: hsl(219, 9%, 45%);
+$black-color: hsl(0, 0%, 0%);
+$color-1: hsl(220, 14%, 75%);
+$color-2: hsl(220, 13%, 13%);
+$color-3: hsl(25, 100%, 94%);
+$primary-font: "Open Sans";
+
+$line-height: 1.6;
+
+$primary-transition: 0.5s;
+
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;

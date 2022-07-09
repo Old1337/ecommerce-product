@@ -1,0 +1,116 @@
+.product {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &_increase,
+  &_reduce {
+    transition: $primary-transition;
+  }
+
+  &_increase:hover,
+  &_reduce:hover {
+    opacity: 0.5;
+  }
+  &_company {
+    color: $orange-color;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &_title {
+    text-transform: capitalize;
+    font-size: 2rem;
+  }
+  &_p {
+    color: $gray-color;
+    line-height: $line-height;
+    font-size: 1.1rem;
+  }
+  &_prices {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_price {
+    align-items: center;
+    gap: 0.5rem;
+
+    & p {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    & span {
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      display: block;
+      background-color: $color-3;
+      color: $orange-color;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  &_discount {
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    color: $gray-color;
+    font-weight: bold;
+    opacity: 0.5;
+  }
+
+  &_buttons {
+    display: grid;
+    row-gap: 1rem;
+  }
+  &_quantities {
+    background-color: $primary-color;
+    border-radius: 0.5rem;
+    padding: 1.4rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &_quantitiy {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  &_add-to-cart {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $orange-color;
+    padding: 1.4rem;
+    border-radius: 0.5rem;
+    color: white;
+    margin-bottom: 3rem;
+    @include shadow-bottom(#ff7d1a91);
+    transition: $primary-transition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &_add-to-cart_container {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    & img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
